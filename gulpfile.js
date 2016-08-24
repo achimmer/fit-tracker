@@ -5,6 +5,7 @@ var APP_JS = 'app/app.js';
 
 var VENDOR_CSS = [
   'node_modules/materialize-css/dist/css/materialize.min.css',
+  'node_modules/materialize-css/dist/css/styles.css'
 ];
 
 var VENDOR_JS = [
