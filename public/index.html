@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Flashcards</title>
+  <title>Fit Tracker</title>
   <link rel="stylesheet" href="/css/vendor.css">
 </head>
 
@@ -11,7 +11,7 @@
 
   <nav class="green darken-1">
     <div class="container nav-wrapper">
-      <a href="#" class="brand-logo">Flash Cards</a>
+      <a href="#" class="brand-logo"><i class="material-icons">accessibility</i>Fit Tracker</a>
       <!-- <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="sass.html">Sass</a></li>
       </ul> -->
@@ -19,6 +19,7 @@
   </nav>
 
   <div class="container">
+
     <div class="row">
       <div class="col s12">
         <div class="card">
@@ -26,8 +27,8 @@
             <div class="card-title">
               Create Card
             </div>
-            <input id="card-title" type="text" value="prototype object">
-            <textarea id="card-desc" class="materialize-textarea"> the prototype of the current object. </textarea>
+            <input id="card-title" type="text" value="acitivity">
+            <textarea id="card-desc" class="materialize-textarea">test</textarea>
           </div>
           <div class="card-action">
             <button id="card-create" class="waves-effect waves-light blue btn">Save</a>
@@ -36,15 +37,15 @@
       </div>
     </div>
 
-
     <div class="row">
       <div class="col s12">
         <table id="card-list">
           <thead>
             <tr>
-              <th> Term </th>
-              <th> Description </th>
-              <th> Actions </th>
+              <th>Acitivty</th>
+              <th>Distance</th>
+              <th>Time</th>
+              <th>Reps</th>
             </tr>
           </thead>
           <tbody>
@@ -52,6 +53,7 @@
         </table>
       </div>
     </div>
+    
   </div>
 
   <!-- Modal Structure -->
@@ -65,10 +67,8 @@
     </div>
   </div>
 
-
   <script src="/js/vendor.js" charset="utf-8"></script>
   <script src="/js/app.js" charset="utf-8"></script>
-  <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
   <script>
     // Initialize Firebase
     var config = {
