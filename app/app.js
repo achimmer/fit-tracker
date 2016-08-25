@@ -3,6 +3,9 @@ $(function() {
   // FIT list
   var $fitList = $('#fit-list tbody');
 
+  // FIT fit-form
+  var $fitForm = $('#fit-form');
+
   // FIT activity log form
   var $entryCreateBtn = $('#entry-create');
   var $entryDate = $('#entry-date');
@@ -38,6 +41,15 @@ $(function() {
       type: $entryType.val(),
       measurement: $entryMeasurement.val()
     });
+    clearInputs();
+  }
+
+  function clearInputs() {
+    console.log('does this get called?');
+    $entryDate.val('');
+    $entryActivity.val('');
+    $entryType.val('');
+    $entryMeasurement.val('');
   }
 
   // FIT edit
