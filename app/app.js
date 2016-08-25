@@ -45,7 +45,6 @@ $(function() {
   }
 
   function clearInputs() {
-    console.log('does this get called?');
     $entryDate.val('');
     $entryActivity.val('');
     $entryType.val('');
