@@ -1,0 +1,158 @@
+/* FIT TRACKER -- Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+ @media only screen and (min-width: 993px) {
+   .container {
+       width: 90%;
+   }
+ }
+
+.text-right{
+  text-align: right;
+}
+.text-center{
+  text-align: center;
+}
+.text-left{
+  text-align: left;
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+select {
+  display: block;
+}
+
+.input-field input {
+  border-radius: 5px;
+  background-color: rgba(255,255,255,0.9);
+  padding: 0 .5rem;
+}
+
+.input-field.col label {
+    left: 1.5rem;
+}
+
+input:not([type]):focus:not([readonly]),
+input[type=text]:focus:not([readonly]),
+input[type=password]:focus:not([readonly]),
+input[type=email]:focus:not([readonly]),
+input[type=url]:focus:not([readonly]),
+input[type=time]:focus:not([readonly]),
+input[type=date]:focus:not([readonly]),
+input[type=datetime]:focus:not([readonly]),
+input[type=datetime-local]:focus:not([readonly]),
+input[type=tel]:focus:not([readonly]),
+input[type=number]:focus:not([readonly]),
+input[type=search]:focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.25);
+}
+
+input:not([type]):focus:not([readonly]) + label,
+input[type=text]:focus:not([readonly]) + label,
+input[type=password]:focus:not([readonly]) + label,
+input[type=email]:focus:not([readonly]) + label,
+input[type=url]:focus:not([readonly]) + label,
+input[type=time]:focus:not([readonly]) + label,
+input[type=date]:focus:not([readonly]) + label,
+input[type=datetime]:focus:not([readonly]) + label,
+input[type=datetime-local]:focus:not([readonly]) + label,
+input[type=tel]:focus:not([readonly]) + label,
+input[type=number]:focus:not([readonly]) + label,
+input[type=search]:focus:not([readonly]) + label,
+textarea.materialize-textarea:focus:not([readonly]) + label {
+  color: rgba(0, 0, 0, 0.25);
+}
+
+.input-field .prefix {
+  color: #b71c1c;
+  top: .5rem;
+  left: 1.5rem;
+}
+
+.input-field .prefix.active {
+  color: rgba(0, 0, 0, 0.25);
+}
+
+.input-field label.active {
+  font-size: 0.8rem;
+  -webkit-transform: translateY(-170%);
+          transform: translateY(-170%);
+}
+
+.btn.edit, .btn.delete {
+  padding: 0 1rem;
+}
+
+.fit-form {
+  padding:1.5rem 0;
+}
+.fit-form h1 {
+  margin: 0.25rem;
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+.fit-form .container .row {
+  margin:.75rem 0;
+}
+
+#entry-create {
+  margin-left: 0.75rem;
+}
+
+#fit-list {
+  margin:1.5rem 0;
+}
+
+footer.page-footer {
+  padding: 2.25rem 0;
+  /*position: fixed;
+  bottom: 0;
+  width: 100%;*/
+}
+
+footer.page-footer h1 {
+  margin: 0.5rem 0;
+  color:rgba(255,255,255,0.25);
+  font-size:1.5rem;
+}
+
+#weather-data {
+  margin: 1rem auto;
+  border: 3px solid rgba(50,50,50,0.5);
+  border-radius: 15px;
+  padding: 0.75rem;
+  width: 18rem;
+}
+
+.weather-item {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color:rgba(255, 255, 255, 0.75);
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.weather-text {
+  font-size: 1.75rem;
+}
+
+nav {
+  box-shadow: none;
+}
+
+.brand-logo {
+  font-size: 2.5rem;
+}

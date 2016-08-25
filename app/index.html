@@ -4,95 +4,109 @@
 <head>
   <meta charset="utf-8">
   <title>Fit Tracker</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="/css/vendor.css">
+  <link rel="stylesheet" href="/css/app.css">
 </head>
 
 <body>
 
-  <nav class="green darken-1">
+  <nav class="white">
     <div class="container nav-wrapper">
-      <a href="#" class="brand-logo"><i class="material-icons">accessibility</i>Fit Tracker</a>
+      <a href="#" class="brand-logo red-text"><i class="material-icons">accessibility</i>Fit Tracker</a>
       <!-- <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="sass.html">Sass</a></li>
       </ul> -->
-      <i class="material-icons">accessibility</i>
     </div>
   </nav>
-
-  <div class="container">
-
-    <div class="row">
-      <div class="col s12">
-        <div class="card">
-          <div class="card-content">
-            <div class="card-title">
-              Create Card
-            </div>
-            <input id="card-title" type="text" value="acitivity">
-            <textarea id="card-desc" class="materialize-textarea">test</textarea>
+  <main>
+    <article class="fit-form red">
+      <div class="container">
+        <h1><i class="material-icons">add_circle</i>Add an activity</h1>
+        <div class="row">
+          <div class="input-field col s2">
+            <!-- <i class="material-icons prefix">date_range</i> -->
+            <input id="entry-date" type="date" class="validate">
+            <!-- <label for="icon_prefix">Date</label> -->
           </div>
-          <div class="card-action">
-            <button id="card-create" class="waves-effect waves-light blue btn">Save</a>
+
+          <div class="input-field col s5">
+            <i class="material-icons prefix">directions_run</i>
+            <input id="entry-activity" type="text" class="validate">
+            <label for="icon_prefix">Activity</label>
           </div>
+
+          <div class="input-field col s2">
+            <i class="material-icons prefix">timer</i>
+            <input id="entry-measurement" type="text" class="validate">
+            <label for="icon_prefix">Units</label>
+          </div>
+
+          <div class="input-field col s3">
+            <select id="entry-type">
+              <option value="" disabled selected>Measurement type</option>
+              <option value="Miles">Miles</option>
+              <option value="Reps">Reps</option>
+              <option value="Time">Time</option>
+            </select>
+          </div>
+
+        </div>
+        <button id="entry-create" class="waves-effect waves-light btn red lighten-3">Add</button>
+      </div>
+    </article>
+
+    <article class="container">
+
+      <div class="row">
+        <div class="col s12">
+          <table id="fit-list" class="striped">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Acitivty</th>
+                <th class="text-right">Measurement</th>
+                <th class="text-left">Type</th>
+                <th class="text-center"><i class="material-icons">build</i></th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
         </div>
       </div>
-    </div>
 
-    <div class="row">
-      <div class="col s12">
-        <table id="card-list">
-          <thead>
-            <tr>
-              <th>Acitivty</th>
-              <th>Distance</th>
-              <th>Time</th>
-              <th>Reps</th>
-            </tr>
-          </thead>
-          <tbody>
-          </tbody>
-        </table>
-      </div>
-    </div>
+    </article>
 
-    <div class="row">
-      <div class="input-field col s6">
-        <i class="material-icons prefix">directions_run</i>
-        <input id="icon_prefix" type="text" class="validate">
-        <label for="icon_prefix">Activity</label>
-      </div>
-
-      <div class="input-field col s3">
-        <select>
+    <!-- FIT TRACKER Modal Structure -->
+    <div id="edit-entry-modal" class="modal">
+      <div class="modal-content">
+        <input id="edit-entry-date" type="date" value="">
+        <input id="edit-entry-activity" class="materialize-textarea"></input>
+        <input id="edit-entry-measurement" type="text" class="validate">
+        <select id="edit-entry-type">
           <option value="" disabled selected>Measurement type</option>
-          <option value="1">Miles</option>
-          <option value="2">Reps</option>
-          <option value="3">Time</option>
+          <option value="Miles">Miles</option>
+          <option value="Reps">Reps</option>
+          <option value="Time">Time</option>
         </select>
       </div>
-
-      <div class="input-field col s3">
-        <i class="material-icons prefix">update</i>
-        <input id="icon_telephone" type="tel" class="validate">
-        <label for="icon_telephone">measurement</label>
+      <div class="modal-footer">
+        <a id="entry-update" href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Save</a>
       </div>
     </div>
-
-  </div>
-
-  <!-- Modal Structure -->
-  <div id="edit-card-modal" class="modal">
-    <div class="modal-content">
-      <input id="edit-card-title" type="text" value="">
-      <textarea id="edit-card-desc" class="materialize-textarea"></textarea>
+  </main>
+  <footer class="page-footer grey darken-3">
+    <div id="weather-app" class="container center">
+      <h1>Local weather</h1>
+      <div id="weather-data" class="center"></div>
+      <button class="js-geolocation waves-effect waves-light btn grey darken-4" style="display: none;">Use Your Location</button>
     </div>
-    <div class="modal-footer">
-      <a id="card-update" href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Save</a>
-    </div>
-  </div>
+  </footer>
 
   <script src="/js/vendor.js" charset="utf-8"></script>
   <script src="/js/app.js" charset="utf-8"></script>
+
   <script>
     // Initialize Firebase
     var config = {

@@ -4,8 +4,11 @@ var concat = require('gulp-concat');
 var APP_JS = 'app/app.js';
 
 var VENDOR_CSS = [
-  'node_modules/materialize-css/dist/css/materialize.min.css',
-  'node_modules/materialize-css/dist/css/styles.css'
+  'node_modules/materialize-css/dist/css/materialize.min.css'
+];
+
+var APP_CSS = [
+  'app/app.css'
 ];
 
 var VENDOR_JS = [
@@ -28,6 +31,10 @@ gulp.task('copy', function(){
 
   gulp.src(VENDOR_CSS)
     .pipe(concat('vendor.css'))
+    .pipe(gulp.dest('public/css'));
+
+  gulp.src(APP_CSS)
+    .pipe(concat('app.css'))
     .pipe(gulp.dest('public/css'));
 
   gulp.src(VENDOR_JS)
