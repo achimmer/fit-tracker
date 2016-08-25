@@ -74,7 +74,6 @@ $(function() {
   // FIT populate list
   function loadFitList() {
     firebase.database().ref('fit-list/').once('value').then(renderFitList);
-    // console.log('does this load?');
   }
 
   // FIT render list
@@ -89,6 +88,7 @@ $(function() {
 
   // Weather App
   loadWeather('30.5546695,-97.8291481)');
+
   /* Does your browser support geolocation? */
   if ("geolocation" in navigator) {
     $('.js-geolocation').show();
@@ -103,6 +103,7 @@ $(function() {
     });
   });
 
+  // uses coords from js-geolocation click event and creates a query URL with a WOEID param to an XML file
   function loadWeather(location) {
     var weatherUrl = 'https://query.yahooapis.com/v1/public/yql?q=' + ' select item.condition from weather.forecast where woeid in (SELECT woeid FROM geo.places WHERE text="('+location+')")';
     console.log(weatherUrl);

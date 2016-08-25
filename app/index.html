@@ -56,7 +56,7 @@
       </div>
     </article>
 
-    <article class="container">
+    <article class="fit-list-section container">
 
       <div class="row">
         <div class="col s12">
@@ -81,6 +81,7 @@
     <!-- FIT TRACKER Modal Structure -->
     <div id="edit-entry-modal" class="modal">
       <div class="modal-content">
+        <h5>Update an entry</h5>
         <input id="edit-entry-date" type="date" value="">
         <input id="edit-entry-activity" class="materialize-textarea"></input>
         <input id="edit-entry-measurement" type="text" class="validate">
@@ -95,14 +96,54 @@
         <a id="entry-update" href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Save</a>
       </div>
     </div>
+
   </main>
-  <footer class="page-footer grey darken-3">
-    <div id="weather-app" class="container center">
-      <h1>Local weather</h1>
-      <div id="weather-data" class="center"></div>
-      <button class="js-geolocation waves-effect waves-light btn grey darken-4" style="display: none;">Use Your Location</button>
+
+  <section id="weather-app" class="blue-grey darken-3">
+    <div class="container row">
+      <div class="col s4 text-center weather-icons"><i class="sun material-icons ">wb_sunny</i><i class="cloud material-icons ">wb_cloudy</i></div>
+      <div class="col s4 text-center">
+        <h1>Local weather</h1>
+        <div id="weather-data" class="center"></div>
+      </div>
+      <div class="col s4 text-center weather-icons">
+        <i class="place material-icons">place</i>
+        <button class="js-geolocation waves-effect waves-light btn blue-grey darken-4" style="display: none;">Use Your Location</button>
+      </div>
     </div>
-  </footer>
+  </section>
+  <section id="up-features" class="section blue-grey lighten-4">
+    <div class="container">
+      <h2 class="blue-grey-text">Upcoming features</h2>
+      <ul class="row text-center">
+        <li class="col s3">
+          <div class="card-panel blue accent-1">
+            <i class="material-icons">supervisor_account</i>
+            <h3>User accounts</h3>
+          </div>
+        </li>
+        <li class="col s3">
+          <div class="card-panel blue accent-2">
+            <i class="material-icons">sort</i>
+            <h3>Sort filters</h3>
+          </div>
+        </li>
+        <li class="col s3">
+          <div class="card-panel blue accent-3">
+            <i class="material-icons">ac_unit</i>
+            <h3>Historical temperature</h3>
+          </div>
+        </li>
+        <li class="col s3">
+          <div class="card-panel blue accent-4">
+            <i class="material-icons">layers</i>
+            <h3>Organized by activity</h3>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+  </section>
 
   <script src="/js/vendor.js" charset="utf-8"></script>
   <script src="/js/app.js" charset="utf-8"></script>

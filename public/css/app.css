@@ -12,6 +12,14 @@
    }
  }
 
+ nav {
+   box-shadow: none;
+ }
+
+ .brand-logo {
+   font-size: 2.5rem;
+ }
+
 .text-right{
   text-align: right;
 }
@@ -98,7 +106,7 @@ textarea.materialize-textarea:focus:not([readonly]) + label {
 }
 
 .fit-form {
-  padding:1.5rem 0;
+  padding:1.75rem 0;
 }
 .fit-form h1 {
   margin: 0.25rem;
@@ -113,46 +121,83 @@ textarea.materialize-textarea:focus:not([readonly]) + label {
   margin-left: 0.75rem;
 }
 
+.fit-list-section {
+  min-height: 30rem;
+}
+
 #fit-list {
   margin:1.5rem 0;
 }
 
-footer.page-footer {
+#weather-app {
   padding: 2.25rem 0;
-  /*position: fixed;
-  bottom: 0;
-  width: 100%;*/
 }
 
-footer.page-footer h1 {
+#weather-app h1 {
   margin: 0.5rem 0;
-  color:rgba(255,255,255,0.25);
+  color:rgba(35,51,59,0.75);
   font-size:1.5rem;
 }
 
 #weather-data {
   margin: 1rem auto;
-  border: 3px solid rgba(50,50,50,0.5);
+  /*border: 3px solid rgba(35,51,59,0.75);*/
+  background: rgba(35,51,59,0.5);
   border-radius: 15px;
   padding: 0.75rem;
   width: 18rem;
+}
+
+.weather-icons {
+  position: relative;
+}
+
+.sun, .cloud, .place {
+  position: absolute;
+  font-size: 10rem;
+  color:rgba(35,51,59,0.75);
+}
+.sun {
+  right:2rem;
+  font-size: 8rem;
+  color:rgba(35,51,59,0.75);
+}
+.cloud {
+  right: 7rem;
+  top: 4rem;
+  color:rgba(35,51,59,0.5);
+}
+.place {
+  font-size: 6rem;
+  left: 10rem;
+  top: 1rem;
 }
 
 .weather-item {
   font-size: 2.5rem;
   font-weight: 300;
   color:rgba(255, 255, 255, 0.75);
-  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 }
 
 .weather-text {
   font-size: 1.75rem;
 }
 
-nav {
-  box-shadow: none;
+.js-geolocation {
+  margin-top: 8rem;
 }
 
-.brand-logo {
-  font-size: 2.5rem;
+#up-features {
+  padding: 4rem 0;
+  color:rgba(0, 0, 0, 0.5);;
+}
+#up-features .card-panel {
+  min-height: 18rem;
+}
+#up-features .card-panel h3 {
+  font-size: 2rem;
+}
+#up-features i {
+  font-size: 7rem;
 }
