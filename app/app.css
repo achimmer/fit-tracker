@@ -188,6 +188,45 @@ textarea.materialize-textarea:focus:not([readonly]) + label {
   margin-top: 8rem;
 }
 
+#inspiration {
+  padding: 2rem 0;
+  background: gray url(/media/fitracker-background.jpg);
+  height: 390px;
+  position: relative;
+}
+
+#inspiration .container {
+  position: relative;
+}
+
+#inspiration .quote {
+  margin-top: 2.5rem;
+  padding: 1rem 2rem;
+  background: rgba(0,0,0,0.6);
+  border-radius: 7px;
+  font-size: 2rem;
+  color: rgba(250,250,250,0.9);
+  font-weight: 300;
+}
+
+#inspiration .quote-text {
+
+}
+
+#inspiration img {
+  border: 4px solid rgba(250,250,250,0.25);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 1rem;
+  right:1.5rem;
+}
+#inspiration .cite {
+  text-align: right;
+  font-style: italic;
+  margin-right: 9rem;
+
+}
+
 #up-features {
   padding: 4rem 0;
   color:rgba(0, 0, 0, 0.5);;

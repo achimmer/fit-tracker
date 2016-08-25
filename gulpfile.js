@@ -26,6 +26,9 @@ gulp.task('copy', function(){
   gulp.src('app/index.html')
     .pipe(gulp.dest('public/'));
 
+  gulp.src('app/media/*')
+    .pipe(gulp.dest('public/media'));
+
     gulp.src(APP_JS)
       .pipe(gulp.dest('public/js'));
 
