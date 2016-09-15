@@ -32,14 +32,14 @@
 
           <div class="input-field col s5">
             <i class="material-icons prefix">directions_run</i>
-            <input id="entry-activity" type="text" class="validate">
-            <label for="icon_prefix">Activity</label>
+            <input id="entry-activity" type="text" class="validate" placeholder="Activity">
+            <!-- <label for="icon_prefix">Activity</label> -->
           </div>
 
           <div class="input-field col s2">
             <i class="material-icons prefix">timer</i>
-            <input id="entry-measurement" type="text" class="validate">
-            <label for="icon_prefix">Units</label>
+            <input id="entry-measurement" type="text" class="validate" placeholder="Units">
+            <!-- <label for="icon_prefix">Units</label> -->
           </div>
 
           <div class="input-field col s3">
@@ -97,66 +97,85 @@
       </div>
     </div>
 
+    <aside id="weather-app" class="blue-grey darken-3">
+      <div class="container row">
+        <div class="col s4 text-center weather-icons"><i class="sun material-icons ">wb_sunny</i><i class="cloud material-icons ">wb_cloudy</i></div>
+        <div class="col s4 text-center">
+          <h1>Local weather</h1>
+          <div id="weather-data" class="center"></div>
+        </div>
+        <div class="col s4 text-center weather-icons">
+          <i class="place material-icons">place</i>
+          <button class="js-geolocation waves-effect waves-light btn blue-grey darken-4" style="display: none;">Use Your Location</button>
+        </div>
+      </div>
+    </aside>
+    <section id="inspiration">
+      <div class="container">
+        <div class="quote">
+          <p class="quote-text">"Stop hating yourself for everything you aren't and start loving yourself for everything you already are."</p>
+          <p class="cite">- Brian Wiggington</p>
+          <img src="media/bwigs.jpeg" alt="Brian"/>
+        </div>
+      </div>
+    </section>
+    <section id="up-features" class="section blue-grey lighten-4">
+      <div class="container">
+        <h2 class="blue-grey-text">Upcoming features</h2>
+        <ul class="row text-center">
+          <li class="col s3">
+            <div class="card-panel blue accent-1">
+              <i class="material-icons">supervisor_account</i>
+              <h3>User accounts</h3>
+            </div>
+          </li>
+          <li class="col s3">
+            <div class="card-panel blue accent-2">
+              <i class="material-icons">sort</i>
+              <h3>Sort filters</h3>
+            </div>
+          </li>
+          <li class="col s3">
+            <div class="card-panel blue accent-3">
+              <i class="material-icons">ac_unit</i>
+              <h3>Historical temperature</h3>
+            </div>
+          </li>
+          <li class="col s3">
+            <div class="card-panel blue accent-4">
+              <i class="material-icons">layers</i>
+              <h3>Organized by activity</h3>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+    </section>
   </main>
 
-  <section id="weather-app" class="blue-grey darken-3">
-    <div class="container row">
-      <div class="col s4 text-center weather-icons"><i class="sun material-icons ">wb_sunny</i><i class="cloud material-icons ">wb_cloudy</i></div>
-      <div class="col s4 text-center">
-        <h1>Local weather</h1>
-        <div id="weather-data" class="center"></div>
-      </div>
-      <div class="col s4 text-center weather-icons">
-        <i class="place material-icons">place</i>
-        <button class="js-geolocation waves-effect waves-light btn blue-grey darken-4" style="display: none;">Use Your Location</button>
-      </div>
-    </div>
-  </section>
-  <section id="inspiration">
+  <footer class="page-footer blue-grey">
     <div class="container">
-      <div class="quote">
-        <p class="quote-text">"Stop hating yourself for everything you aren't and start loving yourself for everything you already are."</p>
-        <p class="cite">- Brian Wiggington</p>
-        <img src="media/bwigs.jpeg" alt="Brian"/>
+      <div class="row">
+        <h4>Why Fit Tracker</h4>
+        <div class="col l6 m6 s12">
+          <p class="flow-text">Fit Tracker started back in 2010 when I wanted hold myself more accountable regarding my exercise habbits.</p>
+          <p class="flow-text">It's first existence was a Google Spreadsheet shared with friends and family. Soon others joined.</p>
+        </div>
+        <div class="col l6 m6 s12">
+          <p class="flow-text">This isn't a typical fitness app that ties into your wearable device. Rather it's old school logging.</p>
+          <p class="flow-text">Yet you still ge the benefits of recording the entries and data.</p>
+        </div>
       </div>
     </div>
-  </section>
-  <section id="up-features" class="section blue-grey lighten-4">
-    <div class="container">
-      <h2 class="blue-grey-text">Upcoming features</h2>
-      <ul class="row text-center">
-        <li class="col s3">
-          <div class="card-panel blue accent-1">
-            <i class="material-icons">supervisor_account</i>
-            <h3>User accounts</h3>
-          </div>
-        </li>
-        <li class="col s3">
-          <div class="card-panel blue accent-2">
-            <i class="material-icons">sort</i>
-            <h3>Sort filters</h3>
-          </div>
-        </li>
-        <li class="col s3">
-          <div class="card-panel blue accent-3">
-            <i class="material-icons">ac_unit</i>
-            <h3>Historical temperature</h3>
-          </div>
-        </li>
-        <li class="col s3">
-          <div class="card-panel blue accent-4">
-            <i class="material-icons">layers</i>
-            <h3>Organized by activity</h3>
-          </div>
-        </li>
-      </ul>
-
+    <div class="footer-copyright">
+      <div class="container">
+        <p>© 2016 Andrew Himmer</p>
+      </div>
     </div>
-  </section>
+  </footer>
 
   <script src="/js/vendor.js" charset="utf-8"></script>
   <script src="/js/app.js" charset="utf-8"></script>
-
   <script>
     // Initialize Firebase
     var config = {

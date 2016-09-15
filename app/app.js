@@ -33,6 +33,17 @@ $(function() {
   // initalize firebase database
   firebase.database().ref('fit-list/').on('value', renderFitList);
 
+  // FIT create (original)
+  // function createEntry() {
+  //   firebase.database().ref('fit-list/').push({
+  //     date: $entryDate.val(),
+  //     act: $entryActivity.val(),
+  //     type: $entryType.val(),
+  //     measurement: $entryMeasurement.val()
+  //   });
+  //   clearInputs();
+  // }
+  
   // FIT create
   function createEntry() {
     firebase.database().ref('fit-list/').push({
